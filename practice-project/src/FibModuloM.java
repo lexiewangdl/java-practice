@@ -14,7 +14,6 @@ public class FibModuloM {
 			first = second; // Update previous two numbers
 			second = fld;
 		}
-
 		return fld;
 	}
 
@@ -80,8 +79,8 @@ public class FibModuloM {
 		long fmld = findRemainder(m, 10); // The last digit of Fibonacci number Fm
 
 		long res = 0;
-		if ((nsld - msld) < 0) { 
-		// If the last digit of sum(F1+...+Fm) is greater than that of sum(F1+...+Fn)
+		if ((nsld - msld) < 0) {
+			// If the last digit of sum(F1+...+Fm) is greater than that of sum(F1+...+Fn)
 			res = 10 + (nsld - msld);
 		} else
 			res = nsld - msld;
@@ -89,51 +88,68 @@ public class FibModuloM {
 		return (res + fmld) % 10;
 	}
 
+	public long findSumSquared(long n) {
+		long nsld = findRemainder(n, 10); // Last digit of Fn
+		long nposld = findRemainder(n + 1, 10); // Last digit of F(n+1)
+
+		long productLastDigit = (nsld * nposld) % 10;
+
+		return productLastDigit;
+	}
+
 	public static void main(String[] args) {
 		FibModuloM fmm = new FibModuloM();
 		Scanner in = new Scanner(System.in);
+
+//		System.out.println("Pisano Period:");
+//		for (int i = 1; i <= 10; i++) {
+//			System.out.println("m: " + i + " Period length: " + fmm.findPeriod(i));
+//		}
+//
+//		/*
+//		 * Task: Given two integers n and m, output Fn mod m (which is the remainder of
+//		 * Fn when divided by m)
+//		 * Input: integer n, 1 <= n <= 10^14; integer m, 2 <= m <=10^3
+//		 */
+//		
+//		// Test
+//		System.out.println(fmm.findRemainder(239, 1000));
+//		System.out.println(fmm.findRemainder(2816213588l, 239));
+//		System.out.println(fmm.findRemainder(10, 2));
+//		System.out.println(fmm.findRemainder(9999999999999l, 2));
+//		 
+//		 // Run
+//		long a = in.nextLong();
+//		long b = in.nextLong();
+//		System.out.println(fmm.findRemainder(a, b));
+//
+//		/*
+//		 * 6 Last Digit of the Sum of Fibonacci Numbers
+//		 * Task: Given an integer n, find the last digit of the sum F0 + F1 + ... + Fn
+//		 * Input: integer n, 0 <= n <= 10^14
+//		 */
+//		
+//		long x = in.nextLong();
+//		System.out.println(fmm.findSumLastDigit(x));
+//
+//		/*
+//		 * 7 Last Digit of the Sum of Fibonacci Numbers Again
+//		 * Task: Given two non-negative integers m and n, where m <= n, 
+//		 * find the last digit of the sum Fm + Fm+1 +... + Fn
+//		 * Input: integer m and n, 0 <= m <= n <= 10^14
+//		 */
+//
+//		long m = in.nextLong();
+//		long n = in.nextLong();
+//		System.out.println(fmm.findSumTwoNums(m, n));
 		
-		System.out.println("Pisano Period:");
-		for (int i = 1; i <= 10; i++) {
-			System.out.println("m: " + i + " Period length: " + fmm.findPeriod(i));
-		}
-
-		/*
-		 * Task: Given two integers n and m, output Fn mod m (which is the remainder of
-		 * Fn when divided by m)
-		 * Input: integer n, 1 <= n <= 10^14; integer m, 2 <= m <=10^3
-		 */
+//		System.out.println(fmm.findSumSquared(7));
+//		System.out.println(fmm.findSumSquared(73));
+//		System.out.println(fmm.findSumSquared(1234567890));
 		
-		// Test
-		System.out.println(fmm.findRemainder(239, 1000));
-		System.out.println(fmm.findRemainder(2816213588l, 239));
-		System.out.println(fmm.findRemainder(10, 2));
-		System.out.println(fmm.findRemainder(9999999999999l, 2));
-		 
-		 // Run
-		long a = in.nextLong();
-		long b = in.nextLong();
-		System.out.println(fmm.findRemainder(a, b));
+		long c = in.nextLong();
+		System.out.println(fmm.findSumSquared(c));
 
-		/*
-		 * 6 Last Digit of the Sum of Fibonacci Numbers
-		 * Task: Given an integer n, find the last digit of the sum F0 + F1 + ... + Fn
-		 * Input: integer n, 0 <= n <= 10^14
-		 */
-		
-		long x = in.nextLong();
-		System.out.println(fmm.findSumLastDigit(x));
-
-		/*
-		 * 7 Last Digit of the Sum of Fibonacci Numbers Again
-		 * Task: Given two non-negative integers m and n, where m <= n, 
-		 * find the last digit of the sum Fm + Fm+1 +... + Fn
-		 * Input: integer m and n, 0 <= m <= n <= 10^14
-		 */
-
-		long m = in.nextLong();
-		long n = in.nextLong();
-		System.out.println(fmm.findSumTwoNums(m, n));
 	}
 
 }
