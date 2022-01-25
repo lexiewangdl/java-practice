@@ -3,8 +3,13 @@ This repository contains Java practice projects aimed at practicing algorithms, 
 
 ## Cousera: Algorithmic Toolbox
 The following are solutions to programming assignments of the online course [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox).
-- Fibonacci Number
-- [Binary Search (with and without duplicates)](/practice-project/src/Fibonacci.java)
-- Quick Sort with Three-Way Partitioning
+- [Least Common Multiple](/practice-project/src/LeastCommonMultiple.java)
+- [Greatest Common Divisor]
+- [Fibonacci Number](/practice-project/src/Fibonacci.java)
+- [Greedy Algorithm Part 1](/practice-project/src/GreedyAlgorithms.java), including Money Change, Maximum Value of the Loot, Car Fueling
+- [Greedy Algorithm Part 2](/practice-project/src/GreedyAlgorithm.java), Maximum Advertisement Revenue
+- [Binary Search (with and without duplicates)](/practice-project/src/BinarySearch.java)
+- Find [Majority Element](/practice-project/src/MajorityElement.java)
+- [Quick Sort with Three-Way Partitioning](/practice-project/src/Sorting.java)
 
 ## Coursera: Data Structures
