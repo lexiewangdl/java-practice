@@ -9,11 +9,11 @@ public class PointsAndSegments {
         
         Arrays.sort(starts);
         Arrays.sort(ends);
-        Arrays.sort(points);
-        
-        int i = 0, j = 0; // Indices for segment starts and segment ends
-        int c = 0;
+
         for (int k = 0; k < points.length; k++) {
+        	int c = 0;
+        	int i = 0, j = 0; // Indices for segment starts and segment ends
+
         	while (i < starts.length && starts[i] <= points[k]) {
         		i++;
         		c++;
