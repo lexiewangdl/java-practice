@@ -10,12 +10,6 @@ public class Inversions {
 		
 		int[] leftArr = Arrays.copyOfRange(arr, left, mid);
 		int[] rightArr = Arrays.copyOfRange(arr, mid, right);
-//		System.out.println("n1: "+ (mid - left + 1));
-//		System.out.println("Left Length:" + leftArr.length);
-//		System.out.println(Arrays.toString(leftArr));
-//		System.out.println("n2: "+(right - mid));
-//		System.out.println("Right Length:" +rightArr.length);
-//		System.out.println(Arrays.toString(rightArr));
 		
 		int i = 0, j = 0; // Initial indices of left and right array
 		long swaps = 0; // Keep track of number of inversions
@@ -31,7 +25,7 @@ public class Inversions {
 				arr[k] = rightArr[j]; // Put right item in merged array
 				j++; // Update index of right subarray
 				
-				swaps += ((long)mid + 1l) - ((long)left + (long)i); // If leftArr[i] > rightArr[j], then
+				swaps += ((long)mid) - ((long)left + (long)i); // If leftArr[i] > rightArr[j], then
 												 // there are (mid - i) inversions
 			}
 			k++; // Update index of merged array
@@ -47,6 +41,7 @@ public class Inversions {
 			j++; 
 			k++;
 		}
+//		System.out.println("Merged: "+Arrays.toString(arr));
 				
 		return swaps;
 	}
@@ -64,12 +59,18 @@ public class Inversions {
 		// Sort the first half
 		inv += mergeSort(arr, left, mid);
 		// Sort the second half
-		inv += mergeSort(arr, mid + 1, right);
+		inv += mergeSort(arr, mid, right);
 		
 		// Merge the two parts
 		inv += merge(arr, left, mid, right);
 
 		return inv;
+	}
+	
+	public static void test(int[] arr) {
+		int m = (0 + arr.length)/2;
+		long c = merge(arr, 0, m, arr.length);
+		System.out.println(Arrays.toString(arr));
 	}
 
 	public static void main(String[] args) {
@@ -81,11 +82,6 @@ public class Inversions {
 		}
 		int[] b = new int[n];
 		System.out.println(mergeSort(a, 0, a.length));
-//		int[] lkx = new int[] {9, 8, 7, 3, 2, 1};
-//		int mid = (0 + lkx.length) / 2;
-//		long c = merge(lkx, 0, mid, lkx.length);
-//		System.out.println(Arrays.toString(lkx));
-
 	}
 }
 
