@@ -16,6 +16,7 @@ The following are solutions to programming assignments of the online course [Alg
 - [Binary Search (with and without duplicates)](/practice-project/src/BinarySearch.java)
 - Find [Majority Element](/practice-project/src/MajorityElement.java)
 - [Quick Sort with Three-Way Partitioning](/practice-project/src/Sorting.java)
+- [Number of Inversions](/practice-project/src/Inversions.java), using merge sort
 - To be updated.
 
 ## Coursera: Data Structures
