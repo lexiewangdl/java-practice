@@ -28,3 +28,7 @@ The following are solutions to programming assignments of the online course [Alg
 
 ## Coursera: Data Structures
 To be updated.
+
+## Udemy: Learn JAVA Programming - Beginner to Master
+The following are solutions to programming assignments of the online course [Learn JAVA Programming - Beginner to Master](https://www.udemy.com/course/java-se-programming/) on Udemy.
+To be updated.
