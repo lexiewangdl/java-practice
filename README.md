@@ -7,9 +7,9 @@ The following are solutions to programming assignments of the online course [Alg
 ### Week 2
 - [Least Common Multiple](/practice-project/src/LeastCommonMultiple.java)
 - [Greatest Common Divisor](/practice-project/src/GreatestCommonDivisor.java)
-- [Fibonacci Number](/practice-project/src/Fibonacci.java): Find the *n*th Fibonacci number F~n~.
+- [Fibonacci Number](/practice-project/src/Fibonacci.java): Find the *n*th Fibonacci number F<sub>n</sub>.
 - [Fibonacci Number's Last Digit](/practice-project/src/FibonacciLastDigit.java): Find the last digit of a larger Fibonacci number.
-- [Fibonacci Modulo M](/practice-project/src/FibModuloM.java): (1) Given two integers *n* and *m*, find F~n~ mod *m*. (2) Given an integer *n*, find the last digit of the sum *F~0~ + F~1~ + ... + F~n~*. (3) Given two non-negative integers *m* and *n* (*m* is smaller than or equal to *n*), find the last digit of the sum *F~m~ + F~m+1~ + ... + F~n~*. (4) Find the last digit of the sum of squares of Fibonacci numbers.
+- [Fibonacci Modulo M](/practice-project/src/FibModuloM.java): (1) Given two integers *n* and *m*, find F<sub>n</sub> mod *m*. (2) Given an integer *n*, find the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*. (3) Given two non-negative integers *m* and *n* (*m* is smaller than or equal to *n*), find the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*. (4) Find the last digit of the sum of squares of Fibonacci numbers.
 
 ### Week 3: Greedy Algorithms
 - [Greedy Algorithm Part 1](/practice-project/src/GreedyAlgorithms.java), including Money Change, Maximum Value of the Loot, Car Fueling
