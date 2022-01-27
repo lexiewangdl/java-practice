@@ -19,10 +19,10 @@ The following are solutions to programming assignments of the online course [Alg
 - [Greedy Algorithm Part 5](/practice-project/src/LargestNumber.java): **Maximum Salary** (Largest Number).
 
 ### Week 4: Divide and Conquer
-- [Binary Search (with and without duplicates)](/practice-project/src/BinarySearch.java)
-- Find [Majority Element](/practice-project/src/MajorityElement.java)
-- [Quick Sort with Three-Way Partitioning](/practice-project/src/Sorting.java)
-- [Number of Inversions](/practice-project/src/Inversions.java), using merge sort
+- [Binary Search (with and without duplicates)](/practice-project/src/BinarySearch.java): (1) Implement binary search algorithm on sorted, huge lists. (2) Implement binary search algorithm on sorted sequence of integers with duplicates.
+- Find [Majority Element](/practice-project/src/MajorityElement.java): Design an *O(n log n)* algorithm to check whether an input sequence contains a majority element.
+- [Quick Sort with Three-Way Partitioning](/practice-project/src/Sorting.java): Re-design a given randomized quick sort algorithm so that it works fast even on sequences containing many equal elements.
+- [Number of Inversions](/practice-project/src/Inversions.java): Count the number of inversions of a given sequence, using merge sort.
 - [Organize a Lottery](/practice-project/src/PointsAndSegments.java)
 - To be updated.
 
