@@ -5,7 +5,7 @@ This repository contains Java coding practices aimed at practicing algorithms, d
 The following are solutions to programming assignments of the online course [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox).
 - [Least Common Multiple](/practice-project/src/LeastCommonMultiple.java)
 - [Greatest Common Divisor](/practice-project/src/GreatestCommonDivisor.java)
-- [Fibonacci Number](/practice-project/src/Fibonacci.java)
+- [Fibonacci Number](/practice-project/src/Fibonacci.java): Find the *n*th Fibonacci number F~n~.
 - [Fibonacci Number's Last Digit](/practice-project/src/FibonacciLastDigit.java)
 - [Fibonacci Modulo M](/practice-project/src/FibModuloM.java)
 - [Greedy Algorithm Part 1](/practice-project/src/GreedyAlgorithms.java), including Money Change, Maximum Value of the Loot, Car Fueling
