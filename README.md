@@ -13,10 +13,10 @@ The following are solutions to programming assignments of the online course [Alg
 
 ### Week 3: Greedy Algorithms
 - [Greedy Algorithm Part 1](/practice-project/src/GreedyAlgorithms.java): (1) **Money Change**: find the minimum number of coins needed to change the input value into coins with different denominations. (2) **Maximum Value of the Loot**: fractional knapsack problem. (3) **Car Fueling**: find minimum number of refills needed.
-- [Greedy Algorithm Part 2](/practice-project/src/GreedyAlgorithm.java): **Maximum Advertisement Revenue**
-- Greedy Algorithm Part 3, [Covering Segments](/practice-project/src/CoveringSegments.java)
-- Greedy Algorithm Part 4, [Different Summands](/practice-project/src/DifferentSummands.java)
-- Greedy Algorithm Part 5, [Largest Number](/practice-project/src/LargestNumber.java)
+- [Greedy Algorithm Part 2](/practice-project/src/GreedyAlgorithm.java): **Maximum Advertisement Revenue**.
+- [Greedy Algorithm Part 3](/practice-project/src/CoveringSegments.java): **Collecting Signature** (Covering Segments).
+- [Greedy Algorithm Part 4](/practice-project/src/DifferentSummands.java): **Maximum Number of Prizes** (Different Summands).
+- [Greedy Algorithm Part 5](/practice-project/src/LargestNumber.java): **Maximum Salary** (Largest Number).
 
 ### Week 4: Divide and Conquer
 - [Binary Search (with and without duplicates)](/practice-project/src/BinarySearch.java)
