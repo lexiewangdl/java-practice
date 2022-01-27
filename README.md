@@ -17,6 +17,7 @@ The following are solutions to programming assignments of the online course [Alg
 - Find [Majority Element](/practice-project/src/MajorityElement.java)
 - [Quick Sort with Three-Way Partitioning](/practice-project/src/Sorting.java)
 - [Number of Inversions](/practice-project/src/Inversions.java), using merge sort
+- [Organize a Lottery](/practice-project/src/PointsAndSegments.java)
 - To be updated.
 
 ## Coursera: Data Structures
