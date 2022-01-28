@@ -2,7 +2,8 @@ import java.util.*;
 
 public class LCS2 {
 
-	// Failed case #18/37: time limit exceeded (Time used: 3.02/1.50, memory used: 29028352/2147483648.)
+	// Failed case #18/37: time limit exceeded (Time used: 3.02/1.50, memory used:
+	// 29028352/2147483648.)
 	private static int lcs2(int[] a, int[] b, int m, int n) {
 
 		// If either array is empty, length of common subsequence is zero
@@ -20,12 +21,20 @@ public class LCS2 {
 		else
 			return Math.max(lcs2(a, b, m, n - 1), lcs2(a, b, m - 1, n));
 	}
- 
 
 	public static int min(int a, int b, int c) {
 		if (a <= b && a <= c)
 			return a;
 		if (b <= a && b <= c)
+			return b;
+		else
+			return c;
+	}
+
+	public static int max(int a, int b, int c) {
+		if (a >= b && a >= c)
+			return a;
+		if (b >= a && b >= c)
 			return b;
 		else
 			return c;
@@ -70,21 +79,47 @@ public class LCS2 {
 
 		return dist;
 	}
-	
+
+	// Longest Common Subsequence of 2 Sequences
 	public static int lcs(int[] a, int[] b) {
-		if (a.length == 0 || b.length == 0) return 0;
-		int t = a.length + b.length;
-		int ed = findEditDistance(a, b);
-		return (t - ed)/2;
+		if (a.length == 0 || b.length == 0)
+			return 0;
+		int t = a.length + b.length; // Total number of characters or numbers in two sequences
+		int ed = findEditDistance(a, b); // Edit distance
+		
+		// Length of largest common subsequence of 2 sequences is 
+		// equal to total (total - edit distance)/2
+		return (t - ed) / 2;
 	}
-	
+
+	// Longest Common Subsequence of 3 Sequences
 	public static int lcs3(int[] a, int[] b, int[] c) {
-		if (a.length == 0 || b.length == 0 || c.length == 0) return 0;
-		return min(lcs(a, b), lcs(b, c), lcs(a, c));
+		int A = a.length;
+		int B = b.length;
+		int C = c.length;
+
+		int[][][] table = new int[A + 1][B + 1][C + 1];
+
+		for (int i = 1; i < A + 1; i++) {
+			for (int j = 1; j < B + 1; j++) {
+				for (int k = 1; k < C + 1; k++) {
+					if (i == 0 && j == 0 & k == 0) 
+						table[i][j][k] = 0;
+
+					if (a[i - 1] == b[j - 1] && a[i - 1] == c[k - 1] && b[j - 1] == c[k - 1])
+						table[i][j][k] = table[i - 1][j - 1][k - 1] + 1;
+					else
+						table[i][j][k] = max(table[i - 1][j][k], table[i][j - 1][k], table[i][j][k - 1]);
+
+				}
+			}
+		}
+
+		return table[A][B][C];
 	}
 
 	public static void main(String[] args) {
-		// Largest Common Subsequence of 2 Sequences
+		// Longest Common Subsequence of 2 Sequences
 //		Scanner scanner = new Scanner(System.in);
 //		int n = scanner.nextInt();
 //		int[] a = new int[n];
@@ -98,26 +133,27 @@ public class LCS2 {
 //			b[i] = scanner.nextInt();
 //		}
 
-		//System.out.println(lcs2(a, b, c, d)); // Failed case #18/37: time limit exceeded (Time used: 3.02/1.50, memory used: 29028352/2147483648.)
-		//System.out.println(lcs(a, b));
-		
-		// Largest Common Subsequence of 3 Sequences
+		// System.out.println(lcs2(a, b, c, d)); // Failed case #18/37: time limit
+		// exceeded (Time used: 3.02/1.50, memory used: 29028352/2147483648.)
+		// System.out.println(lcs(a, b));
+
+		// Longest Common Subsequence of 3 Sequences
 		Scanner scanner = new Scanner(System.in);
-        int an = scanner.nextInt();
-        int[] a = new int[an];
-        for (int i = 0; i < an; i++) {
-            a[i] = scanner.nextInt();
-        }
-        int bn = scanner.nextInt();
-        int[] b = new int[bn];
-        for (int i = 0; i < bn; i++) {
-            b[i] = scanner.nextInt();
-        }
-        int cn = scanner.nextInt();
-        int[] c = new int[cn];
-        for (int i = 0; i < cn; i++) {
-            c[i] = scanner.nextInt();
-        }
-        System.out.println(lcs3(a, b, c));
+		int an = scanner.nextInt();
+		int[] a = new int[an];
+		for (int i = 0; i < an; i++) {
+			a[i] = scanner.nextInt();
+		}
+		int bn = scanner.nextInt();
+		int[] b = new int[bn];
+		for (int i = 0; i < bn; i++) {
+			b[i] = scanner.nextInt();
+		}
+		int cn = scanner.nextInt();
+		int[] c = new int[cn];
+		for (int i = 0; i < cn; i++) {
+			c[i] = scanner.nextInt();
+		}
+		System.out.println(lcs3(a, b, c));
 	}
 }
