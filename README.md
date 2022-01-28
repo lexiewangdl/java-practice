@@ -26,6 +26,11 @@ The following are solutions to programming assignments of the online course [Alg
 - [Organize a Lottery](/practice-project/src/PointsAndSegments.java)
 - To be updated.
 
+### Week 5: Dynamic Programming
+- Primitive Calculator
+- [Edit Distance](/practice-project/src/EditDistance.java)
+- [Largest Common Subsequence of 2 or 3 Sequences of Numbers](/practice-project/src/LCS2.java)
+
 ## Coursera: Data Structures
 To be updated.
 
