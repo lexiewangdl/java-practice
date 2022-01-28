@@ -33,7 +33,8 @@ class EditDistance {
 				int insertion = table[i][j-1] + 1;
 				int deletion = table[i-1][j] + 1;
 				int match = table[i-1][j-1];
-				int mismatch = table[i-1][j-1] + 1;
+				int mismatch = table[i-1][j-1] + 1; // +1 if substitution counts as 1
+				// +2 if substitution counts as 2
 				
 				if (s.charAt(i-1) == t.charAt(j-1))
 					table[i][j] = min(insertion, deletion, match);
