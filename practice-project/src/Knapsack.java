@@ -1,5 +1,11 @@
 import java.util.*;
 
+/*
+ * You are given a set of bars of gold and your goal is to take as much gold as possible
+ * into your bag. There is just one copy of each bar and for each bar you can either take 
+ * it or not (hence you cannot take a fraction of a bar).
+ */
+
 public class Knapsack {
 	static int max(int a, int b) {
 		return (a >= b) ? a : b;
