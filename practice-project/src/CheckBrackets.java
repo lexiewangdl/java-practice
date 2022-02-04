@@ -23,11 +23,13 @@ class CheckBrackets {
 
 	public static String isBalanced(String text) {
 		Stack<Character> obs = new Stack<Character>(); // Stack to store opening brackets
+		Stack<Integer> idx = new Stack<Integer>(); // Stack to store indices of opening brackets
 
 		for (int position = 0; position < text.length(); position++) { // For each char in string
 			char next = text.charAt(position);
 			if (next == '(' || next == '[' || next == '{') { // If char is one of opening brackets
 				obs.push(next); // Put on top of stack
+				idx.push(position);
 			} else { // If char is not opening bracket
 				if (next == ')' || next == ']' || next == '}') { // If char is closing bracket
 					if (obs.empty()) {// and there's no opening bracket
@@ -35,6 +37,7 @@ class CheckBrackets {
 						return Integer.toString(ind); // Return 1-based index of char
 					}
 					char top = obs.pop(); // Get item on top of stack
+					int id = idx.pop();
 					if (!isMatched(next, top)) { // If brackets don't match
 						int ind = (position + 1);
 						return Integer.toString(ind); // Return 1-based index of char
@@ -43,9 +46,9 @@ class CheckBrackets {
 			}
 		}
 
-		if (!obs.empty()) {
-			char last = obs.lastElement();
-			return Integer.toString(obs.indexOf(last) + 1);
+		if (!idx.empty()) {
+			int f = idx.firstElement();
+			return Integer.toString(f + 1);
 		}
 		return "Success";
 	}
@@ -56,5 +59,6 @@ class CheckBrackets {
 		String text = reader.readLine();
 
 		System.out.println(isBalanced(text));
+		// Good job! (Max time used: 0.10/1.50, max memory used: 31670272/2147483648.)
 	}
 }
