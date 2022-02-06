@@ -40,15 +40,19 @@ public class StackWithMax {
                 stack.push(value);
             } else if ("pop".equals(operation)) {
                 stack.pop();
-                if (queue.size() >= 1)
+                if (queue.size() >= 1) {
                 	queue.remove(queue.size() - 1);
+                }	
+                
             } else if ("max".equals(operation)) {
-            	if (queue.isEmpty()) {
-            		int max = Collections.max(stack);
+            	if (queue.isEmpty()) { // If "max" has never been called
+            		int max = Collections.max(stack); // Find the maximum in stack
             		System.out.println(max);
             		queue.add(max);
             	} else {
-            		int max = Math.max(queue.get(queue.size() - 1), stack.lastElement());
+            		int lastMax = stack.lastElement();
+            		int max = Math.max(queue.get(queue.size() - 1), lastMax); 
+            		queue.remove(queue.size() - 1);
             		queue.add(max);
             		System.out.println(max);
             	}
