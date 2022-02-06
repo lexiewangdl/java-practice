@@ -48,8 +48,7 @@ public class StackWithMax {
             		System.out.println(max);
             		queue.add(max);
             	} else {
-            		int max = Math.max(queue.get(0), stack.lastElement());
-            		queue.remove(0);
+            		int max = Math.max(queue.get(queue.size() - 1), stack.lastElement());
             		queue.add(max);
             		System.out.println(max);
             	}
