@@ -41,7 +41,8 @@ public class StackWithMax {
             } else if ("pop".equals(operation)) {
                 stack.pop();
                 if (queue.size() >= 1) {
-                	queue.remove(queue.size() - 1);
+                	// Every time we pop one element from stack, also remove last maximum from queue
+                	queue.remove(queue.size() - 1); 
                 }	
                 
             } else if ("max".equals(operation)) {
@@ -52,8 +53,8 @@ public class StackWithMax {
             	} else {
             		int lastMax = stack.lastElement();
             		int max = Math.max(queue.get(queue.size() - 1), lastMax); 
-            		queue.remove(queue.size() - 1);
-            		queue.add(max);
+            		queue.remove(queue.size() - 1); // Remove previous maximum
+            		queue.add(max); // Add new maximum
             		System.out.println(max);
             	}
                 
