@@ -5,7 +5,7 @@ This repository contains Java coding practices aimed at practicing algorithms, d
 The following are solutions to programming assignments of the online course [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox).
 
 ### Week 2
-- [Least Common Multiple](/practice-project/src/LeastCommonMultiple.java)
+- [Least Common Multiple](/practice-project/src/coursera/algorithmic/LeastCommonMultiple.java)
 - [Greatest Common Divisor](/practice-project/src/coursera/algorithmic/GreatestCommonDivisor.java)
 - [Fibonacci Number](/practice-project/src/coursera/algorithmic/Fibonacci.java): Find the *n*th Fibonacci number F<sub>n</sub>.
 - [Fibonacci Number's Last Digit](/practice-project/src/coursera/algorithmic/FibonacciLastDigit.java): Find the last digit of a larger Fibonacci number.
@@ -19,16 +19,16 @@ The following are solutions to programming assignments of the online course [Alg
 - [Greedy Algorithm Part 5](/practice-project/src/coursera/algorithmic/LargestNumber.java): **Maximum Salary** (Largest Number).
 
 ### Week 4: Divide and Conquer
-- [Binary Search (with and without duplicates)](/practice-project/src/BinarySearch.java): (1) Implement binary search algorithm on sorted, huge lists. (2) Implement binary search algorithm on sorted sequence of integers with duplicates.
-- [Find Majority Element](/practice-project/src/MajorityElement.java): Design an *O(n log n)* algorithm to check whether an input sequence contains a majority element.
-- [Quick Sort with Three-Way Partitioning](/practice-project/src/Sorting.java): Re-design a given randomized quick sort algorithm so that it works fast even on sequences containing many equal elements.
-- [Number of Inversions](/practice-project/src/Inversions.java): Count the number of inversions of a given sequence, using merge sort.
+- [Binary Search (with and without duplicates)](/practice-project/src/coursera/algorithmic/BinarySearch.java): (1) Implement binary search algorithm on sorted, huge lists. (2) Implement binary search algorithm on sorted sequence of integers with duplicates.
+- [Find Majority Element](/practice-project/src/coursera/algorithmic/MajorityElement.java): Design an *O(n log n)* algorithm to check whether an input sequence contains a majority element.
+- [Quick Sort with Three-Way Partitioning](/practice-project/src/coursera/algorithmic/Sorting.java): Re-design a given randomized quick sort algorithm so that it works fast even on sequences containing many equal elements.
+- [Number of Inversions](/practice-project/src/coursera/algorithmic/Inversions.java): Count the number of inversions of a given sequence, using merge sort.
 - [Organize a Lottery](/practice-project/src/coursera/algorithmic/PointsAndSegments.java)
 
 ### Week 5: Dynamic Programming
 - Primitive Calculator
 - [Edit Distance](/practice-project/src/coursera/algorithmic/EditDistance.java)
-- [Longest Common Subsequence of 2 or 3 Sequences of Numbers](/practice-project/src/LCS2.java)
+- [Longest Common Subsequence of 2 or 3 Sequences of Numbers](/practice-project/src/coursera/algorithmic/LCS2.java)
 
 ## Coursera: Data Structures
 ### Week 1: Basic Data Structures
