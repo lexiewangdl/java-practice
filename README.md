@@ -2,7 +2,7 @@
 This repository contains Java coding practices aimed at practicing algorithms, data structures, and the Java programming language.
 
 ## Cousera: Algorithmic Toolbox
-The following are solutions to programming assignments of the online course [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox).
+The following are solutions to programming assignments of the online course [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox). This course is part of the [Data Structures and Algorithms Specialization](https://www.coursera.org/specializations/data-structures-algorithms).
 
 ### Week 2
 - [Least Common Multiple](/practice-project/src/coursera/algorithmic/LeastCommonMultiple.java)
@@ -31,6 +31,8 @@ The following are solutions to programming assignments of the online course [Alg
 - [Longest Common Subsequence of 2 or 3 Sequences of Numbers](/practice-project/src/coursera/algorithmic/LCS2.java)
 
 ## Coursera: Data Structures
+This section contains solutions to programming assignments of the online course [Data Structures](https://www.coursera.org/learn/data-structures) on Coursera. This course is part of the [Data Structures and Algorithms Specialization](https://www.coursera.org/specializations/data-structures-algorithms).
+
 ### Week 1: Basic Data Structures
 - [Check Brackets in the Code](/practice-project/src/coursera/ds/CheckBrackets.java): Implement a feature for a text editor to find errors in the usage of brackets in the code.
 - Tree height
