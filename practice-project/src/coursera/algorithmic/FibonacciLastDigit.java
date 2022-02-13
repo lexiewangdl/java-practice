@@ -1,3 +1,5 @@
+package coursera.algorithmic;
+
 import java.util.Scanner;
 
 /* Algorithmic Toolbox Week 2 Programming Assignment 2 Last Digit of a Large Fibonacci Number

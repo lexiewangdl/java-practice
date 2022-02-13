@@ -31,7 +31,8 @@ public class StackWithMax {
         FastScanner scanner = new FastScanner(); 
         int queries = scanner.nextInt();
         Stack<Integer> stack = new Stack<Integer>();
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+        ArrayList<Integer> queue = new ArrayList<Integer>();
+        //LinkedList<Integer> queue = new LinkedList<Integer>();
 
         for (int qi = 0; qi < queries; ++qi) {
             String operation = scanner.next();
@@ -39,10 +40,10 @@ public class StackWithMax {
                 int value = scanner.nextInt();
                 stack.push(value);
             } else if ("pop".equals(operation)) {
-                stack.pop();
-                if (queue.size() >= 1) {
+                int tm = stack.pop();
+                if (queue.get(queue.size() - 1) == tm) {
                 	// Every time we pop one element from stack, also remove last maximum from queue
-                	queue.remove(queue.size() - 1); 
+                	queue.remove(queue.size()-1); 
                 }	
                 
             } else if ("max".equals(operation)) {
@@ -51,9 +52,13 @@ public class StackWithMax {
             		System.out.println(max);
             		queue.add(max);
             	} else {
-            		int lastMax = stack.lastElement();
-            		int max = Math.max(queue.get(queue.size() - 1), lastMax); 
-            		queue.remove(queue.size() - 1); // Remove previous maximum
+            		int lastMax = 0;
+            		if (queue.size() >= 2)
+            			lastMax = queue.get(queue.size() - 2);
+            		else if (queue.size() < 2)
+            			lastMax = stack.lastElement();
+            		int max = Math.max(queue.get(queue.size()-1), lastMax);
+            		queue.remove(queue.size()-1); // Remove previous maximum
             		queue.add(max); // Add new maximum
             		System.out.println(max);
             	}
