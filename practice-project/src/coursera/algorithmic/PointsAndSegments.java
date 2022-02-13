@@ -1,3 +1,5 @@
+package coursera.algorithmic;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;

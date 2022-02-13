@@ -1,3 +1,5 @@
+package coursera.algorithmic;
+
 import java.util.*;
 
 public class Inversions {

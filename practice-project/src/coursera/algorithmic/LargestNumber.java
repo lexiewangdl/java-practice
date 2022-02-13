@@ -1,3 +1,5 @@
+package coursera.algorithmic;
+
 import java.util.*;
 
 public class LargestNumber {
@@ -11,31 +13,6 @@ public class LargestNumber {
 		if (valBA > valAB) return B;
 		return A;
 	}
-
-	
-
-//    static String printLargest(String[] a)
-//    {
-//    	String result = "";
-//    	ArrayList<String> al = new ArrayList<String>();
-//    	Collections.addAll(al, a);
-//    	
-//        Collections.sort(al, new Comparator<String>()
-//        {
-//            @Override public int compare(String str1, String str2)
-//            {
-//                String str12 = str1 + str2;
-//                String str21 = str2 + str1;
-//                return str12.compareTo(str21) > 0 ? -1 : 1;
-//            }
-//        });
-//        
-//        for (int i = 0; i < al.size(); i++) {
-//        	result = result.concat(al.get(i));
-//        }
-//
-//        return result;
-//    }
 
     private static String largestNumber(String[] a) {
     	String result = "";
