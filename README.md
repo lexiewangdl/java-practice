@@ -40,6 +40,7 @@ The following are solutions to programming assignments of the online course [Alg
 ### Week 3: Prioirity Queues and Heap Sort
 - [Make Heap](/practice-project/src/coursera/ds/BuildHeap.java): Convert an array of integers into a min-heap using only *O(n)* swaps.
 - [Parallel Processing](/practice-project/src/coursera/ds/JobQueue.java): Simulate a program that processes a list of jobs in parallel. Use priority queues to determine for each job which thread will process it and when will it start processing.
+- [Merging Tables](/practice-project/src/coursera/ds/MergingTables.java): Simulate a sequence of merge operations with tables in a data base.
 
 To be updated.
 
