@@ -24,7 +24,6 @@ The following are solutions to programming assignments of the online course [Alg
 - [Quick Sort with Three-Way Partitioning](/practice-project/src/Sorting.java): Re-design a given randomized quick sort algorithm so that it works fast even on sequences containing many equal elements.
 - [Number of Inversions](/practice-project/src/Inversions.java): Count the number of inversions of a given sequence, using merge sort.
 - [Organize a Lottery](/practice-project/src/PointsAndSegments.java)
-- To be updated.
 
 ### Week 5: Dynamic Programming
 - Primitive Calculator
