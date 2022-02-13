@@ -32,11 +32,17 @@ The following are solutions to programming assignments of the online course [Alg
 - [Longest Common Subsequence of 2 or 3 Sequences of Numbers](/practice-project/src/LCS2.java)
 
 ## Coursera: Data Structures
-To be updated.
+### Week 1: Basic Data Structures
+- [Check Brackets in the Code](/practice-project/src/coursera/ds/CheckBrackets.java): Implement a feature for a text editor to find errors in the usage of brackets in the code.
+- Tree height
+- [Network Packet Processing Simulation](/practice-project/src/coursera/ds/ProcessPackages.java): Simulate the processing of network packets.
+- Stack with Maximum
 
 ### Week 3: Prioirity Queues and Heap Sort
 - [Make Heap](/practice-project/src/coursera/ds/BuildHeap.java): Convert an array of integers into a min-heap using only *O(n)* swaps.
 - [Parallel Processing](/practice-project/src/coursera/ds/JobQueue.java): Simulate a program that processes a list of jobs in parallel. Use priority queues to determine for each job which thread will process it and when will it start processing.
+
+To be updated.
 
 ## Udemy: Learn JAVA Programming - Beginner to Master
 The following are solutions to programming assignments of the online course [Learn JAVA Programming - Beginner to Master](https://www.udemy.com/course/java-se-programming/) on Udemy.
