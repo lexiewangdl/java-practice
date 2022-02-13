@@ -116,3 +116,9 @@ public class JobQueue {
         }
     }
 }
+
+// https://www.baeldung.com/java-comparator-comparable
+// https://stackoverflow.com/questions/2555284/java-priority-queue-with-a-custom-anonymous-comparator
+// https://www.w3schools.com/java/java_constructors.asp
+// https://www.geeksforgeeks.org/priority-queue-class-in-java/
+
