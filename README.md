@@ -34,6 +34,10 @@ The following are solutions to programming assignments of the online course [Alg
 ## Coursera: Data Structures
 To be updated.
 
+### Week 3: Prioirity Queues and Heap Sort
+- [Make Heap](/practice-project/src/coursera/ds/BuildHeap.java): Convert an array of integers into a min-heap using only *O(n)* swaps.
+- [Parallel Processing](/practice-project/src/coursera/ds/JobQueue.java): Simulate a program that processes a list of jobs in parallel. Use priority queues to determine for each job which thread will process it and when will it start processing.
+
 ## Udemy: Learn JAVA Programming - Beginner to Master
 The following are solutions to programming assignments of the online course [Learn JAVA Programming - Beginner to Master](https://www.udemy.com/course/java-se-programming/) on Udemy.
 To be updated.
