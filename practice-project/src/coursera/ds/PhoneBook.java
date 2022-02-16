@@ -7,7 +7,6 @@ import java.util.Map.Entry;
 public class PhoneBook {
 
 	private FastScanner in = new FastScanner();
-	// Keep list of all existing (i.e. not deleted yet) contacts.
 
 	private HashMap<String, Integer> contacts = new HashMap<String, Integer>();
 
@@ -56,6 +55,9 @@ public class PhoneBook {
 
 		} else if (query.type.equals("del")) {
 			while (iterator.hasNext()) {
+				if (!contacts.containsValue(query.number)) // If the number doesn't exist in phone book
+					break; // Nothing needs to be done
+				
 				Entry<String, Integer> entry = iterator.next();
 
 				if (entry.getValue().equals(query.number)) {
@@ -66,7 +68,7 @@ public class PhoneBook {
 		} else {
 			String response = "not found";
 			for (Entry<String, Integer> entry : contacts.entrySet()) {
-				if (entry.getValue() == query.number) {
+				if (entry.getValue().equals(query.number)) {
 					response = entry.getKey();
 					break;
 				}
