@@ -4,6 +4,14 @@ import java.io.*;
 import java.util.*;
 import java.util.Map.Entry;
 
+/*
+ * Task: Implement a simple phone book manager using direct addressing.
+ * Input: Single integer N in first line - the number of queries. It's followed by
+ * 		  N lines, each of them contains one query.
+ * Time Limit: Java 6 secs.
+ * Memory Limit: 512MB.
+ */
+
 public class PhoneBook2 {
 
 	private FastScanner in = new FastScanner();
