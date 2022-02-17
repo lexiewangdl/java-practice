@@ -37,16 +37,15 @@ public class HashChains {
 	private void add(Query query) {
 		int ha = this.hashFunc(query.s);
 		
-		if (buckets.get(ha).isEmpty()) {
-			buckets.get(ha).add(query.s);
-		}
-		
-		ArrayList<String> bucket = buckets.get(ha);
-
-		if (!bucket.contains(query.s)) {
-			bucket.add(0, query.s);
-			buckets.remove(ha);
-			buckets.add(ha, bucket);
+		if (buckets.get(ha).isEmpty()) { // If the ha-th list in the table is an empty array list
+			buckets.get(ha).add(query.s); // add query string directly
+		} else {
+			ArrayList<String> bucket = buckets.get(ha); 
+			if (!bucket.contains(query.s)) {
+				bucket.add(0, query.s);
+				buckets.remove(ha);
+				buckets.add(ha, bucket);
+			}
 		}
 	}
 
