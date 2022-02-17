@@ -44,6 +44,11 @@ This section contains solutions to programming assignments of the online course 
 - [Parallel Processing](/practice-project/src/coursera/ds/JobQueue.java): Simulate a program that processes a list of jobs in parallel. Use priority queues to determine for each job which thread will process it and when will it start processing.
 - [Merging Tables](/practice-project/src/coursera/ds/MergingTables.java): Simulate a sequence of merge operations with tables in a data base.
 
+### Week 4: Hash Tables
+- [Phone Book](/practice-project/src/coursera/ds/PhoneBook2.java): Implement a simple phone book manager, use the direct addressing scheme.
+- [Phone Book](/practice-project/src/coursera/ds/PhoneBook.java): Another solution to the phone book problem using HashMap.
+- [Hash Chains](/practice-project/src/coursera/ds/HashChains.java): Implement a hash table using the chaining scheme. The hash function is a polynomial hash function.
+- Find Pattern in Text
 To be updated.
 
 ## Udemy: Learn JAVA Programming - Beginner to Master
