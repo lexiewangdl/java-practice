@@ -33,68 +33,59 @@ public class HashChains {
 		}
 	}
 
-	private void writeSearchResult(boolean wasFound) {
-		out.println(wasFound ? "yes" : "no");
-		// Uncomment the following if you want to play with the program interactively.
-		// out.flush();
-	}
 
 	private void add(Query query) {
 		int ha = this.hashFunc(query.s);
+		
+		if (buckets.get(ha).isEmpty()) {
+			buckets.get(ha).add(query.s);
+		}
+		
 		ArrayList<String> bucket = buckets.get(ha);
 
 		if (!bucket.contains(query.s)) {
-			buckets.get(ha).add(query.s);
+			bucket.add(0, query.s);
+			buckets.remove(ha);
+			buckets.add(ha, bucket);
 		}
 	}
 
 	private void del(Query query) {
 		int ha = this.hashFunc(query.s);
-		ArrayList<String> bucket = buckets.get(ha);
-		for (int i = 0; i < bucket.size(); i++) {
-			if (bucket.get(i).equals(query.s)) {
-				bucket.get(i);
+
+		for (int i = 0; i < buckets.get(ha).size(); i++) {
+			if (buckets.get(ha).get(i).equals(query.s)) {
+				buckets.get(ha).remove(i);
 				break;
 			}
 		}
 	}
 
-	private void find(Query query) {
+	private String find(Query query) {
 		int ha = this.hashFunc(query.s);
-		boolean wasFound = false;
-		if (buckets.get(ha).contains(query.s))
-			wasFound = true;
-		writeSearchResult(wasFound);
-	}
-
-	private ArrayList<String> check(Query query) {
-		ArrayList<String> bucket = buckets.get(query.ind);
-		return bucket;
+		if (buckets.get(ha).contains(query.s)) {
+			return "yes";
+		}
+		return "no";
 	}
 
 	private void processQuery(Query query) {
-		
-		for (int i = 0; i < bucketCount; i++) {
-			buckets.add(i, new ArrayList<String>());
-		}
-		
 		switch (query.type) {
 		case "add":
 			this.add(query);
+			break;
 		case "del":
 			this.del(query);
+			break;
 		case "find":
-			this.find(query);
+			out.println(this.find(query));
 			break;
 		case "check":
-//			ArrayList<String> bkt = this.check(query);
-//			for (String s : bkt) {
-//				if (this.hashFunc(s) == query.ind)
-//					out.print(s + " ");
-//			}
-			//out.println();
-			// Uncomment the following if you want to play with the program interactively.
-			// out.flush();
+			ArrayList<String> bk = buckets.get(query.ind);
+			for (String s : bk) {
+				out.print(s + " ");
+			}
+			out.println();
 			break;
 		default:
 			throw new RuntimeException("Unknown query: " + query.type);
@@ -102,10 +93,13 @@ public class HashChains {
 	}
 
 	public void processQueries() throws IOException {
-		buckets = new ArrayList<ArrayList<String>>(bucketCount);
 		in = new FastScanner();
 		out = new PrintWriter(new BufferedOutputStream(System.out));
 		bucketCount = in.nextInt();
+		buckets = new ArrayList<ArrayList<String>>(bucketCount);
+		for (int i = 0; i < bucketCount; i++) {
+			buckets.add(i, new ArrayList<String>());
+		}
 		int queryCount = in.nextInt();
 		for (int i = 0; i < queryCount; ++i) {
 			processQuery(readQuery());
