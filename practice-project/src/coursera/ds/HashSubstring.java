@@ -70,9 +70,8 @@ public class HashSubstring {
     	ArrayList<Integer> results = new ArrayList<Integer>();
     	for (int i = 0; i < end; i++) {
     		if (p == sums.get(i)) {
-    			if (input.pattern.equals(input.text.substring(i, i + len))) {
+    			if (input.pattern.equals(input.text.substring(i, i + len))) 
     				results.add(i);
-    			}
     		}
     	}
     	
