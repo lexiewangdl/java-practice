@@ -12,11 +12,11 @@ The following are solutions to programming assignments of the online course [Alg
 - [Fibonacci Modulo M](/practice-project/src/coursera/algorithmic/FibModuloM.java): (1) Given two integers *n* and *m*, find F<sub>n</sub> mod *m*. (2) Given an integer *n*, find the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*. (3) Given two non-negative integers *m* and *n* (*m* is smaller than or equal to *n*), find the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*. (4) Find the last digit of the sum of squares of Fibonacci numbers.
 
 ### Week 3: Greedy Algorithms
-- [Greedy Algorithm Part 1](/practice-project/src/coursera/algorithmic/GreedyAlgorithms.java): (1) **Money Change**: find the minimum number of coins needed to change the input value into coins with different denominations. (2) **Maximum Value of the Loot**: fractional knapsack problem. (3) **Car Fueling**: find minimum number of refills needed.
-- [Greedy Algorithm Part 2](/practice-project/src/coursera/algorithmic/GreedyAlgorithm.java): **Maximum Advertisement Revenue**.
-- [Greedy Algorithm Part 3](/practice-project/src/coursera/algorithmic/CoveringSegments.java): **Collecting Signature** (Covering Segments).
-- [Greedy Algorithm Part 4](/practice-project/src/coursera/algorithmic/DifferentSummands.java): **Maximum Number of Prizes** (Different Summands).
-- [Greedy Algorithm Part 5](/practice-project/src/coursera/algorithmic/LargestNumber.java): **Maximum Salary** (Largest Number).
+- [Greedy Algorithms Part 1](/practice-project/src/coursera/algorithmic/GreedyAlgorithms.java): (1) **Money Change**: find the minimum number of coins needed to change the input value into coins with different denominations. (2) **Maximum Value of the Loot**: fractional knapsack problem. (3) **Car Fueling**: find minimum number of refills needed.
+- [Greedy Algorithms Part 2](/practice-project/src/coursera/algorithmic/GreedyAlgorithm.java): **Maximum Advertisement Revenue**.
+- [Greedy Algorithms Part 3](/practice-project/src/coursera/algorithmic/CoveringSegments.java): **Collecting Signature** (Covering Segments).
+- [Greedy Algorithms Part 4](/practice-project/src/coursera/algorithmic/DifferentSummands.java): **Maximum Number of Prizes** (Different Summands).
+- [Greedy Algorithms Part 5](/practice-project/src/coursera/algorithmic/LargestNumber.java): **Maximum Salary** (Largest Number).
 
 ### Week 4: Divide and Conquer
 - [Binary Search (with and without duplicates)](/practice-project/src/coursera/algorithmic/BinarySearch.java): (1) Implement binary search algorithm on sorted, huge lists. (2) Implement binary search algorithm on sorted sequence of integers with duplicates.
@@ -44,6 +44,11 @@ This section contains solutions to programming assignments of the online course 
 - [Parallel Processing](/practice-project/src/coursera/ds/JobQueue.java): Simulate a program that processes a list of jobs in parallel. Use priority queues to determine for each job which thread will process it and when will it start processing.
 - [Merging Tables](/practice-project/src/coursera/ds/MergingTables.java): Simulate a sequence of merge operations with tables in a data base.
 
+### Week 4: Hash Tables
+- [Phone Book](/practice-project/src/coursera/ds/PhoneBook2.java): Implement a simple phone book manager, use the direct addressing scheme.
+- [Phone Book](/practice-project/src/coursera/ds/PhoneBook.java): Another solution to the phone book problem using HashMap.
+- [Hash Chains](/practice-project/src/coursera/ds/HashChains.java): Implement a hash table using the chaining scheme. The hash function is a polynomial hash function.
+- Find Pattern in Text
 To be updated.
 
 ## Udemy: Learn JAVA Programming - Beginner to Master
