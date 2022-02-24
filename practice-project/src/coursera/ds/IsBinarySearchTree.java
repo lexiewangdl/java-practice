@@ -102,7 +102,7 @@ public class IsBinarySearchTree {
 	public void run() throws IOException {
 		IsBST tree = new IsBST();
 		tree.read();
-		if (tree.isBinarySearchTree(tree.tree, tree.nodes)) {
+		if (tree.nodes == 0 || tree.isBinarySearchTree(tree.tree, tree.nodes)) {
 			System.out.println("CORRECT");
 		} else {
 			System.out.println("INCORRECT");
