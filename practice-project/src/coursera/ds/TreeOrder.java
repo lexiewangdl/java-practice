@@ -49,8 +49,7 @@ public class TreeOrder {
 		void read() throws IOException {
 			FastScanner in = new FastScanner();
 			n = in.nextInt();
-			
-			ArrayList<Integer> key = new ArrayList<Integer>(n);
+
 			ArrayList<Integer> left = new ArrayList<Integer>(n);
 			ArrayList<Integer> right = new ArrayList<Integer>(n);
 			
