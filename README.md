@@ -48,8 +48,7 @@ This section contains solutions to programming assignments of the online course 
 - [Phone Book](/practice-project/src/coursera/ds/PhoneBook2.java): Implement a simple phone book manager, use the direct addressing scheme.
 - [Phone Book](/practice-project/src/coursera/ds/PhoneBook.java): Another solution to the phone book problem using HashMap.
 - [Hash Chains](/practice-project/src/coursera/ds/HashChains.java): Implement a hash table using the chaining scheme. The hash function is a polynomial hash function.
-- Find Pattern in Text
-To be updated.
+- [Find Pattern in Text](/practice-project/src/coursera/ds/HashSubstring.java): Implement the Rabin-Karp's algorithm.
 
 ### Week 6: Binary Search Trees
 - [Tree Traversal](/practice-project/src/coursera/ds/TreeOrder.java): Implement in-order, pre-order, and post-order traversals of a binary tree.
