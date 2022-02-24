@@ -24,11 +24,6 @@ public class TreeOrder {
 	}
 
 	public class TreeOrders {
-
-		public ArrayList<Integer> resultIn = new ArrayList<Integer>();
-		public ArrayList<Integer> resultPre = new ArrayList<Integer>();
-		public ArrayList<Integer> resultPost = new ArrayList<Integer>();
-
 		public ArrayList<TreeNode> nodes = new ArrayList<TreeNode>();
 		public TreeNode root;
 
@@ -54,41 +49,33 @@ public class TreeOrder {
 		void read() throws IOException {
 			FastScanner in = new FastScanner();
 			n = in.nextInt();
+			
 			ArrayList<Integer> key = new ArrayList<Integer>(n);
 			ArrayList<Integer> left = new ArrayList<Integer>(n);
 			ArrayList<Integer> right = new ArrayList<Integer>(n);
+			
 			for (int i = 0; i < n; i++) {
-				key.add(i, in.nextInt());
+				if (i == 0) {
+					root = new TreeNode(in.nextInt());
+					nodes.add(root);
+				} else {
+					TreeNode node = new TreeNode(in.nextInt());
+					nodes.add(node);
+				}
 				left.add(i, in.nextInt());
 				right.add(i, in.nextInt());
 			}
-
+			
 			for (int i = 0; i < n; i++) {
-				if (i == 0) {
-					root = new TreeNode(key.get(i));
-					nodes.add(root);
-				} else {
-					TreeNode node = new TreeNode(key.get(i));
-					nodes.add(node);
-				}
-			}
-
-			for (int i = 0; i < n; i++) {
-
-				if (left.get(i) == -1) {
-					nodes.get(i).left = null;
-				} else {
-					nodes.get(i).left = nodes.get(left.get(i));
-				}
-
-				if (right.get(i) == -1) {
-					nodes.get(i).right = null;
-				} else {
-					nodes.get(i).right = nodes.get(right.get(i));
-				}
+				nodes.get(i).left = left.get(i) == -1 ? null : nodes.get(left.get(i));
+				nodes.get(i).right = right.get(i) == -1 ? null : nodes.get(right.get(i));
 			}
 
 		}
+		
+		// In-order Traversal
+		
+		public ArrayList<Integer> resultIn = new ArrayList<Integer>();
 
 		ArrayList<Integer> inOrder(TreeNode root) {
 			inOrderTraversal(root);
@@ -102,6 +89,10 @@ public class TreeOrder {
 			resultIn.add(tree.key);
 			inOrderTraversal(tree.right);
 		}
+		
+		// Pre-order Traversal
+		
+		public ArrayList<Integer> resultPre = new ArrayList<Integer>();
 
 		ArrayList<Integer> preOrder(TreeNode root) {
 			preOrderTraversal(root);
@@ -115,11 +106,15 @@ public class TreeOrder {
 			preOrderTraversal(tree.left);
 			preOrderTraversal(tree.right);
 		}
+		
+		// Post-order Traversal
 
 		ArrayList<Integer> postOrder(TreeNode root) {
 			postOrderTraversal(root);
 			return resultPost;
 		}
+		
+		public ArrayList<Integer> resultPost = new ArrayList<Integer>();
 		
 		public void postOrderTraversal(TreeNode tree) {
 			if (tree == null)
