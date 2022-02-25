@@ -2,9 +2,6 @@ package coursera.ds;
 
 import java.util.*;
 
-import coursera.ds.IsBinarySearchTree.FastScanner;
-import coursera.ds.IsBinarySearchTree.IsBST.TreeNode;
-
 import java.io.*;
 
 public class IsBSTHard {
@@ -26,23 +23,44 @@ public class IsBSTHard {
 			return Integer.parseInt(next());
 		}
 	}
+	
+	// Binary tree node
+	public class TreeNode {
+		int key;
+		TreeNode left, right; // Left child and right child
+		int level;
+
+		TreeNode(int val) {
+			this.key = val;
+			left = right = null;
+			level = 0;
+		}
+
+		boolean isLeaf() {
+			return left == null ? right == null : false;
+		}
+	}
+	
+	// Get level of a node in a binary tree
+//	public static int getLevel(TreeNode node, int key, int level) {
+//		if (node == null) 
+//			return 0;
+//		if (node.key == key) // If node's data is equal to key, return level
+//			return level;
+//		int result = getLevel(node.left, key, level + 1);
+//		if (result != 0) 
+//			return result;
+//		result = getLevel(node.right, key, level + 1);
+//		return result;
+//	}
+//	
+//	public static boolean checkLevel(TreeNode root, int key1, int key2, int level) {
+//		int lev1 = getLevel(root, key1, level);
+//		int lev2 = getLevel(root, key2, level);
+//		return lev1 > lev2 ? true : false;
+//	}
 
 	public class IsBST {
-
-		public class TreeNode {
-			int key;
-			TreeNode parent;
-			TreeNode left, right; // Left child and right child
-
-			TreeNode(int val) {
-				this.key = val;
-				left = right = null;
-			}
-
-			boolean isLeaf() {
-				return left == null ? right == null : false;
-			}
-		}
 
 		int nodes;
 		TreeNode[] tree;
@@ -57,58 +75,54 @@ public class IsBSTHard {
 
 			for (int i = 0; i < nodes; i++) {
 				tree[i] = new TreeNode(in.nextInt());
+				if (i == 0) {
+					root = tree[i];
+					tree[i].level = 1;
+				}
 				left[i] = in.nextInt();
 				right[i] = in.nextInt();
 			}
 			for (int i = 0; i < nodes; i++) {
-				tree[i].left = left[i] == -1 ? null : tree[left[i]];
-				tree[i].right = right[i] == -1 ? null : tree[right[i]];
+				if (left[i] == -1) {
+					tree[i].left = null;
+				} else {
+					tree[i].left = tree[left[i]];
+					tree[i].left.level = tree[i].level + 1;
+				}
+				
+				if (right[i] == -1) {
+					tree[i].right = null;
+				} else {
+					tree[i].right = tree[right[i]];
+					tree[i].right.level = tree[i].level + 1;
+				}
 			}
-			if (nodes != 0)
-				root = tree[0];
 		}
 
-		public ArrayList<Integer> resultIn = new ArrayList<Integer>();
+		public ArrayList<TreeNode> resultIn = new ArrayList<TreeNode>();
 
-		ArrayList<Integer> inOrder(TreeNode root) {
+		ArrayList<TreeNode> inOrder(TreeNode root) {
 			inOrderTraversal(root);
 			return resultIn;
 		}
 
-		public void inOrderTraversal(TreeNode tree) {
-			if (tree == null)
+		public void inOrderTraversal(TreeNode node) {
+			if (node == null)
 				return;
-			inOrderTraversal(tree.left);
-			resultIn.add(tree.key);
-			inOrderTraversal(tree.right);
-		}
-		
-		public static int getLevel(TreeNode root, int key, int level) {
-			if (root == null)
-				return 0;
-			if (root.key == key)
-				return level;
-			int result = getLevel(root.left, key, level + 1);
-			if (result != 0) {
-				return result;
-			}
-			result = getLevel(root.right, key, level + 1);
-			return result;
-		}
-		
-		public static boolean checkLevel(TreeNode root, int key1, int key2, int level) {
-			int lev1 = getLevel(root, key1, level);
-			int lev2 = getLevel(root, key2, level);
-			return lev1 > lev2 ? true : false;
+			inOrderTraversal(node.left);
+			resultIn.add(node);
+			inOrderTraversal(node.right);
 		}
 
 		boolean isBinarySearchTree(TreeNode[] tree, int nodes) {
 			inOrderTraversal(tree[0]);
 
 			for (int i = 0; i < nodes - 1; i++) {
-				if (this.resultIn.get(i) > this.resultIn.get(i + 1))
+				TreeNode l = this.resultIn.get(i);
+				TreeNode r = this.resultIn.get(i + 1);
+				if (l.key > r.key)
 					return false;
-				else if (this.resultIn.get(i) == this.resultIn.get(i + 1) && !checkLevel(this.root, i, i+1, 0))
+				else if (l.key == r.key && l.level > r.level)
 					return false;
 			}
 			return true;
