@@ -40,25 +40,6 @@ public class IsBSTHard {
 			return left == null ? right == null : false;
 		}
 	}
-	
-	// Get level of a node in a binary tree
-//	public static int getLevel(TreeNode node, int key, int level) {
-//		if (node == null) 
-//			return 0;
-//		if (node.key == key) // If node's data is equal to key, return level
-//			return level;
-//		int result = getLevel(node.left, key, level + 1);
-//		if (result != 0) 
-//			return result;
-//		result = getLevel(node.right, key, level + 1);
-//		return result;
-//	}
-//	
-//	public static boolean checkLevel(TreeNode root, int key1, int key2, int level) {
-//		int lev1 = getLevel(root, key1, level);
-//		int lev2 = getLevel(root, key2, level);
-//		return lev1 > lev2 ? true : false;
-//	}
 
 	public class IsBST {
 
