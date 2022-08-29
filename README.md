@@ -54,7 +54,3 @@ This section contains solutions to programming assignments of the online course 
 - [Tree Traversal](/practice-project/src/coursera/ds/TreeOrder.java): Implement in-order, pre-order, and post-order traversals of a binary tree.
 - [Is It a Binary Search Tree?](/practice-project/src/coursera/ds/IsBinarySearchTree.java): Test whether a given data structure is a correct binary search tree. A correct binary search tree must satisfy the following: for any node of the tree, if its key is *x*, then for any node in its left subtree its key must be strictly less than *x*, and for any node in its right subtree its key must be strictly greater than *x*.
 - [Is It a Binary Search Tree? (Hard Version)](/practice-project/src/coursera/ds/IsBSTHard.java): Solve the same problem as the previous one, but for a more general case, when binary search tree may contain equal keys.
-
-## Udemy: Learn JAVA Programming - Beginner to Master
-The following are solutions to programming assignments of the online course [Learn JAVA Programming - Beginner to Master](https://www.udemy.com/course/java-se-programming/) on Udemy.
-To be updated.
