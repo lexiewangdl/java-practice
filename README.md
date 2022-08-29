@@ -1,4 +1,4 @@
-# Java Coding Practices
+# Data Structures and Algorithms
 This repository contains Java coding practices aimed at practicing algorithms, data structures, and the Java programming language.
 
 ## Cousera: Algorithmic Toolbox
